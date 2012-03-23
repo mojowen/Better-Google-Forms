@@ -17,6 +17,8 @@ function better_googleform_shortcode( $atts, $content = null ) {
 			$html = substr($html,4,-3);
 			return $style.'<form action="'.esc_attr($key).'" method="POST" target="_blank" class="better_googleform no_wysiwyg '.$autofill.'" >'.urldecode($html).'</form>';
 		} else return $style.'<form action="'.esc_attr($key).'" method="POST"  target="_blank" class="better_googleform wysiwyg '.$autofill.'" >'.$content.'</form>';
+			return $style.'<form action="'.esc_attr($key).'" method="POST" target="_blank" class="better_googleform no_wysiwyg '.$autofill.'" ><input type="hidden" value="Submit" name="submit">'.urldecode($html).'</form>';
+		} else return $style.'<form action="'.esc_attr($key).'" method="POST"  target="_blank" class="better_googleform wysiwyg '.$autofill.'" ><input type="hidden" value="Submit" name="submit">'.$content.'</form>';
 	endif;
 
 }
