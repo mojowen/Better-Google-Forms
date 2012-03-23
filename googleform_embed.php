@@ -31,12 +31,10 @@ function better_googleform_render() {
 
                 foreach( $element->find('table') as $t) 
                     echo $t;
-            } else echo $element->innertext;
             } else if ($element->find('input[type=submit]') ) {
 				echo "<input type='submit' value='Submit'>";
 			} else echo $element->innertext;
             echo '</p>';
-
         }
     endif;
     exit();
