@@ -3,7 +3,7 @@
 add_action('admin_init', 'better_googleform_options_init' );
 
 function better_googleform_options_init(){
-    add_action('media_buttons', 'jolokia_googleform_button', 20);
+    add_action('media_buttons', 'better_googleform_button', 20);
     add_action('wp_ajax_better_googleform_button_iframe', 'better_googleform_button_iframe');
     add_action('wp_ajax_better_googleform_render', 'better_googleform_render');
 }
@@ -131,6 +131,7 @@ function better_googleform_button_iframe_content(){
                             $('form:first [type=submit]').show().val('No good? Try again.');
                             $('form:first [type=submit]').before('<a href="#" style="margin-right: 148px;" id="return">Look good? Insert into Post!</a>');
                             $('form:first [type=submit]').after('<span id="#fucking"><br>Keep editing the HTML in your post <input type="checkbox" name="fucking" value="yes"></span>');
+                            $('form:first [type=submit]').after('<span id="#autofill"><br>Autofill the form using $_GET variables? (matched on label, w/ spaces as _) <input type="checkbox" name="autofill" value="yes"></span>');
                             $('a#return').focus();
                         }
                     );
@@ -138,9 +139,10 @@ function better_googleform_button_iframe_content(){
                 e.preventDefault();
             });
             $('a#return').live('click', function(e){
+				var autofill = $('input[name=autofill]:checked').length > 0;
                 post_package = $('input[name=fucking]:checked').length > 0 ? 
-                    "[gform (don\'t fuck with this) key='https://spreadsheets.google.com/spreadsheet/formResponse?formkey="+key+"&ifq'] <br><br>"+post_package+"[/gform]" : 
-                    "[gform (don\'t fuck with this) key='https://spreadsheets.google.com/spreadsheet/formResponse?formkey="+key+"&ifq' html='<!-- "+escape(post_package)+" -->']<br>[/gform]";
+                    "[gform (don\'t fuck with this) autofill='"+autofill+"' key='https://spreadsheets.google.com/spreadsheet/formResponse?formkey="+key+"&ifq'] <br><br>"+post_package+"[/gform]" : 
+                    "[gform (don\'t fuck with this) autofill='"+autofill+"' key='https://spreadsheets.google.com/spreadsheet/formResponse?formkey="+key+"&ifq' html='<!-- "+escape(post_package)+" -->']<br>[/gform]";
                 wind.send_to_editor(post_package);
     
                 e.stopPropagation();

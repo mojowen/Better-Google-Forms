@@ -2,7 +2,13 @@ var saving = true;
 
 (function( $ ){
 
-
+	$.fn.notice = function(msg, flavor, time) {
+		if ( time == undefined ) var time = 5000;
+		var thisclass = 'notice '+flavor;
+		this.next('span').remove();
+		this.after('<span class="'+thisclass+'">'+msg+'</span>').next('span').fadeOut(time, function() {$(this).remove() });
+		return this;
+	}
 
 	$.fn.nowloading = function() {
 		$(this).addClass('loading');
