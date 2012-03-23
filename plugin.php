@@ -14,5 +14,6 @@ define('better_googleforms_base', $base);
 
 
 include_once('googleform_embed.php');
+include_once('googleform_shortcode.php');
 
 ?>
