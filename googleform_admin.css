@@ -1,0 +1,70 @@
+span.notice {
+    font-weight: bold;
+    color: green;
+}
+
+.oops, span.mean {
+    color: red;
+}
+
+
+
+/*** Google Form stuff ***/
+
+form.GoogleForm {
+
+}
+
+form.GoogleForm label.ss-q-title {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+
+#content form.GoogleForm.no_wysiwyg select {
+    display: block;
+}
+
+#content form.GoogleForm.wysiwyg p select, #content form.GoogleForm.wysiwyg p input[type=text] {
+    margin-bottom: 0px;
+}
+
+#content form.GoogleForm.wysiwyg select, #content form.GoogleForm.wysiwyg input[type=text] {
+    margin-bottom: 30px;
+}
+
+
+#content form.GoogleForm ul.ss-choices {
+    list-style: none;
+}
+
+#content form.GoogleForm.no_wysiwyg ul.ss-choices {
+    margin: -24px 0px -14px !important;
+}
+
+#content form.GoogleForm.wysiwyg ul.ss-choices {
+    margin: -24px 0px -30px !important;
+}
+
+
+form.GoogleForm ul.ss-choices li {
+    line-height: 0px;
+	margin: 8px;
+}
+
+#content form.GoogleForm table {
+    margin: -24px 0px 30px; 
+}
+
+form.GoogleForm table tr td {
+    padding: .25em .15em;
+}
+
+form.GoogleForm table thead tr td, form.GoogleForm table tr td.ss-scalenumbers {
+    text-align: center;
+}
+
+#content form.GoogleForm.no_wysiwyg input[type=submit] {
+	margin-top: 30px;
+}
