@@ -64,7 +64,9 @@ function better_googleform_button_iframe_content(){
     form {
       padding: 12px 30px;
     }
-    
+	span.googleform_option {
+		font-size: 10px;
+	}
     .GoogleForm {
         width: 300px;
         text-align: left;
@@ -130,8 +132,8 @@ function better_googleform_button_iframe_content(){
                             $('span.notice').remove();
                             $('form:first [type=submit]').show().val('No good? Try again.');
                             $('form:first [type=submit]').before('<a href="#" style="margin-right: 148px;" id="return">Look good? Insert into Post!</a>');
-                            $('form:first [type=submit]').after('<span id="#fucking"><br>Keep editing the HTML in your post <input type="checkbox" name="fucking" value="yes"></span>');
-                            $('form:first [type=submit]').after('<span id="#autofill"><br>Autofill the form using $_GET variables? (matched on label, w/ spaces as _) <input type="checkbox" name="autofill" value="yes"></span>');
+                            $('form:first [type=submit]').after('<span class="googleform_option" id="#autofill"><br><input type="checkbox" name="autofill" value="yes">&nbsp;&nbsp;<strong>Autofill</strong> the form using $_GET variables?<br />Matched by label, with spaces as "_"</span>');
+                            $('form:first [type=submit]').after('<span class="googleform_option" id="#fucking"><br><input type="checkbox" name="fucking" value="yes">&nbsp;&nbsp;Keep editing the HTML in your post</span>');
                             $('a#return').focus();
                         }
                     );
