@@ -4,7 +4,7 @@ Plugin Name: Better Google Forms
 Plugin URI: https://github.com/mojowen/Better-Google-Forms
 Description: Embeds Google forms in posts, but better!
 Author: Scott Duncombe
-Version: 0.5
+Version: 0.6
 Author URI: http://scottduncombe.com/
 */
 

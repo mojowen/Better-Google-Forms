@@ -1,4 +1,4 @@
-=== Better Google Forms ===
+=== Better-Google-Forms ===
 Contributors: mojowen
 Donate link: http://scottduncombe.com
 Tags: google, forms 
@@ -6,13 +6,13 @@ Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: trunk
 
-Connects WordPress to Salsa for embedding events, sign up forms, and reports.
+Simply adds Google Forms to posts and pages in the style of your theme
 
 == Description ==
 
 Simply add Google forms to your posts and pages. But wait (you're probably asking yourself) isn't this really easy thanks to that iFrame code that google gives us? 
 
-Well sure, yes, you can do that. **Except it looks really shitty!** This let's you style and fit the form to your theme, making it blend in seamlessly.
+Well sure, yes, you can do that. Except it looks really shitty! My plugin let's you style and fit the form to your theme, making it blend in seamlessly.
 
 Will auto-populate get variables into a form based off the label name (substituting "_" for spaces). So yourwebsite.com/myform?First_Name=Bob&Last_Name=Smith will fill in "Bob" and "Smith" for the inputs preceded by the labels "First Name" and "Last Name". Try THAT with your iFrame.
 
