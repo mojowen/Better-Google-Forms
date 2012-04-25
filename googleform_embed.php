@@ -11,7 +11,7 @@ function better_googleform_options_init(){
 // Adds the Button
 function better_googleform_button(){
     $title = _('Insert a Google Form');
-    $button = '<a href="'.admin_url('admin-ajax.php').'?action=better_googleform_button_iframe&amp;TB_iframe=true&amp;height=150&amp;respect_dimensions=true" class="thickbox" title="'.$title.'" onclick="return false;"><img src="'.better_googleforms_base.'/googleform.png'.'" alt="'.$title.'" width="11" height="11" /></a>';
+    $button = '<a href="'.admin_url('admin-ajax.php').'?action=better_googleform_button_iframe&amp;TB_iframe=true&amp;height=150&amp;respect_dimensions=true" class="thickbox" title="'.$title.'" onclick="return false;"><img src="'.better_googleforms_base.'googleform.png'.'" alt="'.$title.'" width="11" height="11" /></a>';
 
     echo $button;
 }
